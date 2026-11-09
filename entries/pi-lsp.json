@@ -1,18 +1,18 @@
 {
     "name": "pi-lsp",
     "title": "Pi LSP",
-    "description": "Language Server Protocol integration: definition jump, diagnostics, status and management web UI.",
-    "tags": ["coding", "lsp", "tools"],
+    "description": "Full Language Server Protocol integration supporting 50+ languages from OMP, auto-detection, installation, uninstallation, diagnostics, and web UI.",
+    "tags": ["coding", "lsp", "tools", "developer"],
     "author": {
         "name": "MasFana",
         "github": "MasFana"
     },
-    "version": "1.0.0",
+    "version": "1.1.0",
     "pocketApi": 2,
     "minPocket": "0.20.0",
     "source": {
         "repo": "MasFana/pi-lsp",
-        "commit": "f8c894d7d29b7603f98cce5442eb569b135b0ae9"
+        "commit": "2507b369c5e9031c32823f2abed65770b6b5da5b"
     },
     "declares": {
         "extensions": ["pi-lsp"],
@@ -32,7 +32,10 @@
         "wraps": [],
         "routes": [
             "GET servers",
-            "POST stop"
+            "POST stop",
+            "POST start",
+            "POST install",
+            "POST uninstall"
         ],
         "client": "owner",
         "access": "owner"
@@ -40,13 +43,13 @@
     "files": [
         {
             "name": "pi-lsp.ts",
-            "sha256": "aa6d9eec05a880db9cf048b9adad25bec13642210f6e8fff65facc0edf00ddf5",
-            "size": 12355
+            "sha256": "8873793c686c03c13908c93772002c791e2637acd0a13c2f3f318ec250f2dbfb",
+            "size": 32684
         },
         {
             "name": "pi-lsp.js",
-            "sha256": "7c0a0c224036345607617748e5634daca551496c88882f120f9e1c1baee206a2",
-            "size": 6144
+            "sha256": "260da2097cfcbdce02047d99b178e2a825abf43752339dd9bcb83b0f00f4632a",
+            "size": 11324
         }
     ]
 }
