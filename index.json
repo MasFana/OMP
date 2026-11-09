@@ -2,5 +2,64 @@
     "format": 1,
     "name": "OMP Pi Pocket Extensions",
     "repo": "https://github.com/MasFana/OMP",
-    "extensions": []
+    "extensions": [
+        {
+            "name": "pi-lsp",
+            "title": "Pi LSP",
+            "description": "Language Server Protocol integration: definition jump, diagnostics, status and management web UI.",
+            "tags": [
+                "coding",
+                "lsp",
+                "tools"
+            ],
+            "author": {
+                "name": "MasFana",
+                "github": "MasFana"
+            },
+            "version": "1.0.0",
+            "pocketApi": 2,
+            "minPocket": "0.20.0",
+            "source": {
+                "repo": "MasFana/pi-lsp",
+                "commit": "f8c894d7d29b7603f98cce5442eb569b135b0ae9"
+            },
+            "declares": {
+                "extensions": [
+                    "pi-lsp"
+                ],
+                "tools": [
+                    "lsp_status",
+                    "lsp_diagnostics",
+                    "lsp_definition",
+                    "lsp_manage"
+                ],
+                "readOnlyTools": [
+                    "lsp_status",
+                    "lsp_diagnostics"
+                ],
+                "hooks": [],
+                "sections": [],
+                "commands": [],
+                "wraps": [],
+                "routes": [
+                    "GET servers",
+                    "POST stop"
+                ],
+                "client": "owner",
+                "access": "owner"
+            },
+            "files": [
+                {
+                    "name": "pi-lsp.ts",
+                    "sha256": "aa6d9eec05a880db9cf048b9adad25bec13642210f6e8fff65facc0edf00ddf5",
+                    "size": 12355
+                },
+                {
+                    "name": "pi-lsp.js",
+                    "sha256": "7c0a0c224036345607617748e5634daca551496c88882f120f9e1c1baee206a2",
+                    "size": 6144
+                }
+            ]
+        }
+    ]
 }
