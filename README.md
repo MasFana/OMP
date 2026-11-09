@@ -15,7 +15,7 @@ As the Pocket owner, open **Menu → Extensions → Discover**, set the index at
 
 | Entry | Purpose | Requirements | Source |
 |---|---|---|---|
-| [`pi-lsp`](entries/pi-lsp.json) | Workspace-aware LSP tools, server management, and owner dashboard | Pocket ≥0.28.0; extension API 2 | [MasFana/pi-lsp](https://github.com/MasFana/pi-lsp) |
+| [`pi-lsp`](entries/pi-lsp.json) | Owner-gated lazy LSP startup, post-edit diagnostics, prompt guidance and custom tool-call UI | Pocket ≥0.28.0; extension API 2 | [MasFana/pi-lsp](https://github.com/MasFana/pi-lsp) |
 
 The entry JSON, not this table or its human version label, is authoritative for the pinned commit, files, API requirements, capabilities, and revocations.
 
