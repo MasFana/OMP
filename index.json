@@ -17,12 +17,12 @@
                 "name": "MasFana",
                 "github": "MasFana"
             },
-            "version": "1.1.1",
+            "version": "1.1.2",
             "pocketApi": 2,
             "minPocket": "0.20.0",
             "source": {
                 "repo": "MasFana/pi-lsp",
-                "commit": "e1623d4e6e31f684ece34ed9b0b78dc5fed06aca"
+                "commit": "62dd4d5909a83e99436cb0e8562079064820b1e8"
             },
             "declares": {
                 "extensions": [
@@ -44,6 +44,7 @@
                 "wraps": [],
                 "routes": [
                     "GET servers",
+                    "GET c/:conversation/servers",
                     "POST stop",
                     "POST start",
                     "POST install",
@@ -55,13 +56,13 @@
             "files": [
                 {
                     "name": "pi-lsp.ts",
-                    "sha256": "8873793c686c03c13908c93772002c791e2637acd0a13c2f3f318ec250f2dbfb",
-                    "size": 32684
+                    "sha256": "38d9853c758305ebc388fed400d7cf7260fa5c35e193ede049b3fe595467f1fc",
+                    "size": 32952
                 },
                 {
                     "name": "pi-lsp.js",
-                    "sha256": "eb9a7dfd23f8976a6223d026a0b590da553987752d73e61a1a63899436b09a64",
-                    "size": 13310
+                    "sha256": "4172304a78ea033a04244048684a3c1e362c4ff1bc84de1cb79dc02ab1fbcbc3",
+                    "size": 13770
                 }
             ]
         }
