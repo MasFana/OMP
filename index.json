@@ -6,7 +6,7 @@
         {
             "name": "pi-lsp",
             "title": "Pi LSP",
-            "description": "Full Language Server Protocol integration supporting 50+ languages from OMP, auto-detection, installation, uninstallation, diagnostics, and web UI.",
+            "description": "Workspace-scoped LSP tools and an owner dashboard with 54 server definitions, executable detection, server lifecycle control, and package management.",
             "tags": [
                 "coding",
                 "lsp",
@@ -17,12 +17,12 @@
                 "name": "MasFana",
                 "github": "MasFana"
             },
-            "version": "1.1.2",
+            "version": "1.1.3",
             "pocketApi": 2,
-            "minPocket": "0.20.0",
+            "minPocket": "0.28.0",
             "source": {
                 "repo": "MasFana/pi-lsp",
-                "commit": "62dd4d5909a83e99436cb0e8562079064820b1e8"
+                "commit": "6a53f0638d7ffa166e1c8434f280084d5cee053c"
             },
             "declares": {
                 "extensions": [
@@ -45,6 +45,8 @@
                 "routes": [
                     "GET servers",
                     "GET c/:conversation/servers",
+                    "POST c/:conversation/start",
+                    "POST c/:conversation/stop",
                     "POST stop",
                     "POST start",
                     "POST install",
@@ -56,13 +58,13 @@
             "files": [
                 {
                     "name": "pi-lsp.ts",
-                    "sha256": "38d9853c758305ebc388fed400d7cf7260fa5c35e193ede049b3fe595467f1fc",
-                    "size": 32952
+                    "sha256": "56bcc5151f56f345a5400741fa32fd9334fe85bdfeedf035044e8809d1edc119",
+                    "size": 52629
                 },
                 {
                     "name": "pi-lsp.js",
-                    "sha256": "4172304a78ea033a04244048684a3c1e362c4ff1bc84de1cb79dc02ab1fbcbc3",
-                    "size": 13770
+                    "sha256": "f8174ee80aa500188bae34e591e1514bf6e45fda34ca5dd3d4ee211cb79f5a7a",
+                    "size": 16917
                 }
             ]
         }
