@@ -1,0 +1,265 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://github.com/TannerMidd/pi-pocket-extensions/schema/entry.schema.json",
+    "title": "Pi Pocket extension index entry (format 1)",
+    "$comment": "A copy of the rules of parseEntry in Pi Pocket's src/server/gallery/entry.ts, for editors and for build-index. Where they differ, entry.ts is correct. These rules join two fields, so only parseEntry checks them: files has <name>.ts, and each file name is <name>.ts, <name>.js, <name>.mjs, or in <name>/; no two file names differ only in case; no file name is also a folder of another file; no part of a name ends with a dot or is a Windows device name (such as con, nul, or com1); the files are 2 MiB together at most; readOnlyTools are all in tools; access is not narrower than client; access is owner when client is null and routes is empty. Lengths here count code points, and parseEntry counts UTF-16 units: text with emoji near a limit can pass here and fail there. The reserved names here are Pi Pocket 0.14.0's; parseEntry has the current list.",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "name",
+        "title",
+        "description",
+        "tags",
+        "author",
+        "version",
+        "source",
+        "files",
+        "pocketApi",
+        "minPocket",
+        "declares"
+    ],
+    "properties": {
+        "name": {
+            "description": "The module's name: its file is <name>.ts. Not a built-in module's name, and not pocket-*.",
+            "type": "string",
+            "maxLength": 64,
+            "pattern": "^(?!pocket-)(?!(?:prompt|artifacts|browser|subagents|agent-teams|schedules|goals|plan|guard|codemode|memory|pip|triggers|gallery)$)[a-z0-9][a-z0-9_-]{1,63}$"
+        },
+        "title": {
+            "$ref": "#/$defs/line",
+            "maxLength": 60
+        },
+        "description": {
+            "$ref": "#/$defs/line",
+            "maxLength": 600
+        },
+        "tags": {
+            "type": "array",
+            "maxItems": 10,
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "maxLength": 24,
+                "pattern": "^[a-z0-9][a-z0-9-]{0,23}$"
+            }
+        },
+        "author": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name"],
+            "properties": {
+                "name": {
+                    "$ref": "#/$defs/line",
+                    "maxLength": 60
+                },
+                "github": {
+                    "type": "string",
+                    "maxLength": 39,
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9-]{0,38}$"
+                }
+            }
+        },
+        "version": {
+            "type": "string",
+            "maxLength": 32,
+            "pattern": "^[0-9A-Za-z][0-9A-Za-z.+-]{0,31}$"
+        },
+        "source": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["repo", "commit"],
+            "properties": {
+                "repo": {
+                    "type": "string",
+                    "maxLength": 140,
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9-]{0,38}/(?!\\.\\.?$)[A-Za-z0-9._-]{1,100}$"
+                },
+                "commit": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{40}$"
+                },
+                "path": {
+                    "type": "string",
+                    "maxLength": 200,
+                    "pattern": "^(?:[A-Za-z0-9_][A-Za-z0-9._-]{0,99}(?:/[A-Za-z0-9_][A-Za-z0-9._-]{0,99}){0,3})?$"
+                }
+            }
+        },
+        "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 50,
+            "uniqueItems": true,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["name", "sha256", "size"],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "maxLength": 200,
+                        "pattern": "^[a-z0-9][a-z0-9_-]{1,63}(?:\\.(?:ts|js|mjs)|(?:/(?!node_modules(?:/|$))[A-Za-z0-9_][A-Za-z0-9._-]{0,99}){1,4})$"
+                    },
+                    "sha256": {
+                        "type": "string",
+                        "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "size": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 524288
+                    }
+                }
+            }
+        },
+        "pocketApi": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9007199254740991
+        },
+        "minPocket": {
+            "type": "string",
+            "maxLength": 14,
+            "pattern": "^\\d{1,4}\\.\\d{1,4}\\.\\d{1,4}$"
+        },
+        "declares": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "extensions",
+                "tools",
+                "readOnlyTools",
+                "hooks",
+                "sections",
+                "wraps",
+                "routes",
+                "client",
+                "access"
+            ],
+            "properties": {
+                "extensions": {
+                    "type": "array",
+                    "maxItems": 100,
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 210,
+                        "pattern": "^(?!pocket-)(?!coding-tools$)[A-Za-z0-9][A-Za-z0-9_.:-]{0,63}$"
+                    }
+                },
+                "tools": {
+                    "type": "array",
+                    "maxItems": 100,
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 210,
+                        "pattern": "^(?!(?:read|write|edit|bash|artifact|browser|subagent|team|schedule|codemode|memory|sessions|session_read|session_start|session_send|session_follow|session_stop|session_archive|session_schedule|approvals|watch_pr|repo_watch|session_watch_pr)$)[A-Za-z0-9_-]{1,64}$"
+                    }
+                },
+                "readOnlyTools": {
+                    "type": "array",
+                    "maxItems": 100,
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 210,
+                        "pattern": "^[A-Za-z0-9_-]{1,64}$"
+                    }
+                },
+                "hooks": {
+                    "type": "array",
+                    "maxItems": 100,
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 210,
+                        "pattern": "^[A-Za-z][A-Za-z0-9]{0,63}$"
+                    }
+                },
+                "sections": {
+                    "type": "array",
+                    "maxItems": 100,
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 210,
+                        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,63}$"
+                    }
+                },
+                "wraps": {
+                    "type": "array",
+                    "maxItems": 100,
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 210,
+                        "pattern": "^(tool|section) [A-Za-z0-9][A-Za-z0-9_.:-]{0,63}$"
+                    }
+                },
+                "routes": {
+                    "type": "array",
+                    "maxItems": 100,
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 210,
+                        "pattern": "^(GET|POST|PUT|PATCH|DELETE) [A-Za-z0-9._~:/-]{1,200}$"
+                    }
+                },
+                "client": {
+                    "enum": [null, "owner", "steer", "view"]
+                },
+                "access": {
+                    "enum": ["owner", "steer", "view"]
+                },
+                "commands": {
+                    "type": "array",
+                    "maxItems": 100,
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80,
+                        "pattern": "^(conversation|global) [a-z][a-z0-9_]*-[a-z0-9_-]*$"
+                    }
+                }
+            }
+        },
+        "revoked": {
+            "type": "array",
+            "maxItems": 50,
+            "uniqueItems": true,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["commit", "reason"],
+                "properties": {
+                    "commit": {
+                        "type": "string",
+                        "pattern": "^[0-9a-f]{40}$"
+                    },
+                    "reason": {
+                        "$ref": "#/$defs/line",
+                        "maxLength": 300
+                    }
+                }
+            }
+        }
+    },
+    "$defs": {
+        "line": {
+            "description": "One line of plain text: not empty, no spaces at the ends, no control, invisible, or direction characters.",
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[^\\s\\u0000-\\u001f\\u007f-\\u009f\\u00ad\\u061c\\u180e\\u200b-\\u200f\\u2028-\\u202e\\u2060-\\u206f\\ufeff](?:[^\\u0000-\\u001f\\u007f-\\u009f\\u00ad\\u061c\\u180e\\u200b-\\u200f\\u2028-\\u202e\\u2060-\\u206f\\ufeff]*[^\\s\\u0000-\\u001f\\u007f-\\u009f\\u00ad\\u061c\\u180e\\u200b-\\u200f\\u2028-\\u202e\\u2060-\\u206f\\ufeff])?$"
+        }
+    }
+}

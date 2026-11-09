@@ -1,0 +1,47 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://github.com/TannerMidd/pi-pocket-extensions/schema/index.schema.json",
+    "title": "Pi Pocket extension index (format 1)",
+    "$comment": "Matches parseIndex in Pi Pocket's src/server/gallery/entry.ts. The whole file is 4 MiB at most. parseIndex also refuses two entries with one name.",
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["format", "extensions"],
+    "properties": {
+        "format": {
+            "const": 1
+        },
+        "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80,
+            "pattern": "^[^\\s\\u0000-\\u001f\\u007f-\\u009f\\u00ad\\u061c\\u180e\\u200b-\\u200f\\u2028-\\u202e\\u2060-\\u206f\\ufeff](?:[^\\u0000-\\u001f\\u007f-\\u009f\\u00ad\\u061c\\u180e\\u200b-\\u200f\\u2028-\\u202e\\u2060-\\u206f\\ufeff]*[^\\s\\u0000-\\u001f\\u007f-\\u009f\\u00ad\\u061c\\u180e\\u200b-\\u200f\\u2028-\\u202e\\u2060-\\u206f\\ufeff])?$"
+        },
+        "repo": {
+            "type": "string",
+            "maxLength": 160,
+            "pattern": "^https://github\\.com/[A-Za-z0-9][A-Za-z0-9-]{0,38}/[A-Za-z0-9._-]{1,100}/?$"
+        },
+        "extensions": {
+            "type": "array",
+            "maxItems": 2000,
+            "items": {
+                "if": {
+                    "type": "object",
+                    "required": ["kind"],
+                    "properties": {
+                        "kind": {
+                            "const": "theme"
+                        }
+                    }
+                },
+                "then": {
+                    "$ref": "theme.schema.json"
+                },
+                "else": {
+                    "$ref": "entry.schema.json"
+                }
+            },
+            "description": "The entries: extensions, and themes (kind: theme). Pi Pocket before 0.14.0 counts a theme's entry as one it cannot read."
+        }
+    }
+}
