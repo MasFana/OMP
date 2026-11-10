@@ -373,11 +373,12 @@
         {
             "name": "pi-session-cleanup",
             "title": "Session Cleanup",
-            "description": "Custom Pocket cleanup build required. Owner-only deletion of selected sessions and native subagents; stops owned work, purges storage, preserves shared fork history and project files. No archive fallback.",
+            "description": "Custom Pocket cleanup build required. Owner-only deletion of sessions as a tree: selecting a session includes every native subagent beneath it. Stops owned work, purges storage, preserves shared fork history and project files. No archive fallback.",
             "tags": [
                 "sessions",
                 "cleanup",
                 "subagents",
+                "tree",
                 "administration",
                 "custom-build"
             ],
@@ -385,12 +386,12 @@
                 "name": "MasFana",
                 "github": "MasFana"
             },
-            "version": "1.0.0",
+            "version": "1.0.1",
             "pocketApi": 2,
             "minPocket": "0.28.0",
             "source": {
                 "repo": "MasFana/pi-session-cleanup",
-                "commit": "f4c96b0742ef1d134948d8b523cda2af9c73bd18"
+                "commit": "63125132291fd97bfaecf599aed2932ced96639f"
             },
             "declares": {
                 "extensions": [],
@@ -411,13 +412,13 @@
             "files": [
                 {
                     "name": "pi-session-cleanup.ts",
-                    "sha256": "891195584c07d63abf72f99dd220cdebc64e64ee01938ae4d55a31eff777143a",
-                    "size": 5321
+                    "sha256": "cbc04c62cd88cdffa6ff43f1b9121a5a96731bed4a112b9bcd6ec6cfe7eb78ce",
+                    "size": 5702
                 },
                 {
                     "name": "pi-session-cleanup.js",
-                    "sha256": "ddf2247a19db287888b93b492893b77a94afd19b61a70ae49e7be359dd04619f",
-                    "size": 17624
+                    "sha256": "0d8da300eed2a61c7c2ccbb8fad023ef4597dd3e2823e0fd3a7697e4f864183e",
+                    "size": 22894
                 }
             ],
             "revoked": []
