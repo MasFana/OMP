@@ -1,18 +1,18 @@
 {
     "name": "pi-lsp",
     "title": "Pi Fana Tooling",
-    "description": "Owner-gated LSP, AST and CodeGraph queries with verified proposal/apply, post-edit diagnostics and one cached Tooling panel. Preserves 54 LSP definitions and native Pocket features; no automatic installs or indexing.",
+    "description": "Autonomous owner LSP/AST/CodeGraph workflow: preview/apply, provider management and automatic diagnostics without plugin confirmation prompts. Preserves native Pocket policies and 54 LSP definitions.",
     "tags": ["coding","lsp","ast","codegraph","refactoring","developer"],
     "author": {
         "name": "MasFana",
         "github": "MasFana"
     },
-    "version": "1.3.0",
+    "version": "1.3.1",
     "pocketApi": 2,
     "minPocket": "0.28.0",
     "source": {
         "repo": "MasFana/pi-lsp",
-        "commit": "ba3fa02c8e97f711abff506da3d49877d5d8b85d"
+        "commit": "d3b7949950aa477b473ebfef4499d661c08b7d9b"
     },
     "declares": {
         "extensions": ["pi-lsp"],
@@ -48,8 +48,6 @@
             "POST uninstall",
             "GET tooling/status",
             "GET c/:conversation/tooling/status",
-            "POST tooling/prepare",
-            "POST c/:conversation/tooling/prepare",
             "POST tooling/execute",
             "POST c/:conversation/tooling/execute"
         ],
@@ -59,51 +57,51 @@
     "files": [
         {
             "name": "pi-lsp.ts",
-            "sha256": "cc79995dadec8c218a75a34551cc8dfdc79cd5608aebe2db7b1a0920c0af0ec1",
-            "size": 73373
+            "sha256": "9bc1d8c03981ecc21d23c8fa48f939abd44336714f122447497de1d1d5387ac3",
+            "size": 74132
         },
         {
             "name": "pi-lsp.js",
-            "sha256": "c344893d3a6a853bf2a01bb0317e70a5019f906e65b10c2446652ae69ca0345b",
-            "size": 35782
+            "sha256": "70079b42915f3ed90b88bcb50d304caa0dc482b5034362a3b6c3a91787e37523",
+            "size": 31548
         },
         {
-            "name": "pi-lsp/v1.3.0/contracts.ts",
+            "name": "pi-lsp/v1.3.1/contracts.ts",
             "sha256": "177a31c9a469c80d9d9e6c590ee5ba46201de73045e687756b83f112ba168ef6",
             "size": 2090
         },
         {
-            "name": "pi-lsp/v1.3.0/process.ts",
+            "name": "pi-lsp/v1.3.1/process.ts",
             "sha256": "28a6c427f8e89469e6cbdeec59e54d9b54ffccba5f1f2b0cb54205f2b91e7d6c",
             "size": 4291
         },
         {
-            "name": "pi-lsp/v1.3.0/proposals.ts",
-            "sha256": "ad7cdfd2d159e07468e4375b47a6cab54d796c2d10855584b31fceea0367cd55",
-            "size": 15559
+            "name": "pi-lsp/v1.3.1/proposals.ts",
+            "sha256": "cb644d34acfcd6656d1e5da5e2e9d6dc86a4a4965bbb913d4532056e6acc3479",
+            "size": 15554
         },
         {
-            "name": "pi-lsp/v1.3.0/queries.ts",
-            "sha256": "c2f0567d77a8a9a2069456adb920953e1ef9fcf2fcf32eaf3963d9cfdfac4cc0",
-            "size": 14922
+            "name": "pi-lsp/v1.3.1/queries.ts",
+            "sha256": "5c80824b01532c215fcba14c7d0b3b28db4c59327bf65a7b40a9b1394bc9f3c5",
+            "size": 14917
         },
         {
-            "name": "pi-lsp/v1.3.0/tooling.ts",
-            "sha256": "c253332895d55cdfddd86bb3b03bc758d1df75891b7e70d8c29be10ca1ada2a2",
-            "size": 34187
+            "name": "pi-lsp/v1.3.1/tooling.ts",
+            "sha256": "79650bf46ed64615a11792df70df706b6c613c48c3bfc6849d77da6d60c5b962",
+            "size": 33199
         },
         {
-            "name": "pi-lsp/v1.3.0/ast.ts",
+            "name": "pi-lsp/v1.3.1/ast.ts",
             "sha256": "9759e703c525e53fbf15a4f89bfb6c32859739fbdade2201ce72bde1c43234f1",
             "size": 24374
         },
         {
-            "name": "pi-lsp/v1.3.0/graph.ts",
+            "name": "pi-lsp/v1.3.1/graph.ts",
             "sha256": "97834046090437a233c96410118c0562589c6e276efce9785540649f9d4b099e",
             "size": 17780
         },
         {
-            "name": "pi-lsp/v1.3.0/graph-worker.cjs",
+            "name": "pi-lsp/v1.3.1/graph-worker.cjs",
             "sha256": "654f5b4ed6afe3855383de196eb36152da2e65aa47ca0f614db1dc6111b24b34",
             "size": 17848
         }
