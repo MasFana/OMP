@@ -4,6 +4,53 @@
     "repo": "https://github.com/MasFana/OMP",
     "extensions": [
         {
+            "kind": "theme",
+            "name": "github",
+            "title": "GitHub",
+            "description": "GitHub's look, ported from the GitHub Theme for VS Code: flat surfaces on 1px lines, 6px corners, the Primer blue accent, the green primary button, GitHub's syntax palette and font stacks, GitHub's reading width, and its comment-shaped turns. Brings GitHub Dark Default and GitHub Light Default as a pair, which Appearance offers together or each half alone.",
+            "tags": [
+                "github",
+                "theme",
+                "dark",
+                "light",
+                "developer",
+                "editor"
+            ],
+            "author": {
+                "name": "MasFana",
+                "github": "MasFana"
+            },
+            "version": "1.0.0",
+            "source": {
+                "repo": "MasFana/pi-github-theme",
+                "commit": "bd59001bc8906996d9d6f263357b5c06e37a3af7"
+            },
+            "files": [
+                {
+                    "name": "github/theme.json",
+                    "sha256": "bd054ec9594ca5e8c96cfb1abfd48b95983044c9e8f0370d3bd273db14ac904a",
+                    "size": 331
+                },
+                {
+                    "name": "github/theme.css",
+                    "sha256": "0dc99c1d25ed044fdbbc583d55ab5c0ba852fce203139c0d46626fcae0562cb7",
+                    "size": 3821
+                },
+                {
+                    "name": "github/colors.toml",
+                    "sha256": "6e49adc33cd209ed454511664225e3f4c3827e4cfead3fbb261479a72efebd75",
+                    "size": 619
+                },
+                {
+                    "name": "github/colors-light.toml",
+                    "sha256": "994782657db1cf81affd6922939884bbb7f396c61e63b258a074d0196a797588",
+                    "size": 723
+                }
+            ],
+            "themeApi": 1,
+            "minPocket": "0.14.0"
+        },
+        {
             "name": "pi-lsp",
             "title": "Pi Fana Tooling",
             "description": "55-server LSP catalog, verified installer outcomes, automatic AST detection and source-change CodeGraph sync. Owner handoff without extension prompts; native Pocket policies retained.",

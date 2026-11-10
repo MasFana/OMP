@@ -9,13 +9,14 @@ Reviewed drop-in extensions and themes for [Pi Pocket](https://github.com/Tanner
 
 ## Install an entry
 
-As the Pocket owner, open **Menu → Extensions → Discover**, set the index at the bottom to `MasFana/OMP` or the raw endpoint above, and refresh. Inspect the source, declarations, processes/network access, and permissions before installing. Installation starts disabled; enable the module in **Installed** after review.
+As the Pocket owner, open **Menu → Extensions → Discover**, set the index at the bottom to `MasFana/OMP` or the raw endpoint above, and refresh. Inspect the source, declarations, processes/network access, and permissions before installing. Installation starts disabled; enable the module in **Installed** after review. A theme is CSS only: it runs no code, so it has nothing to enable — each person chooses it in **Appearance → Theme**.
 
 **Updates** are explicit owner actions, never automatically applied. Review the declaration/file diff, apply the update, and reload when prompted. Imported helper-code changes may require a Pocket restart. Gallery receipts (`<name>.gallery.json`) identify installed files and local modifications; reinstalling a published entry can replace a manual correction.
 
 | Entry | Purpose | Requirements | Source |
 |---|---|---|---|
 | [`pi-lsp`](entries/pi-lsp.json) | Pi Fana Tooling: 55-server LSP catalog, verified installer outcomes, automatic AST detection and CodeGraph source-change sync, autonomous preview/apply; no plugin confirmation prompts | Pocket ≥0.28.0; extension API 2; optional compatible providers | [MasFana/pi-lsp](https://github.com/MasFana/pi-lsp) |
+| [`github`](entries/github.json) | GitHub theme: flat surfaces on 1px lines, 6px corners, Primer's blue accent and green primary button, GitHub's syntax palette and fonts, GitHub Dark Default and GitHub Light Default as a pair; CSS only | Pocket ≥0.14.0; theme API 1 | [MasFana/pi-github-theme](https://github.com/MasFana/pi-github-theme) |
 
 The entry JSON, not this table or its human version label, is authoritative for the pinned commit, files, API requirements, capabilities, and revocations.
 
