@@ -24,7 +24,7 @@
             "minPocket": "0.28.0",
             "source": {
                 "repo": "MasFana/pi-lsp",
-                "commit": "f38f790e57b0357390555cf102ac3a4fbbc13ef0"
+                "commit": "981ba85be0b12d980fc770c4129577524f08501a"
             },
             "declares": {
                 "extensions": [
@@ -80,8 +80,8 @@
                 },
                 {
                     "name": "pi-lsp.js",
-                    "sha256": "3c0a80a9aabd820de707bea852fdb5fcc15ad84fe3a6e81e568e1799309a3c38",
-                    "size": 32780
+                    "sha256": "ff11bb3a5b507e2186bdb9860f0e538e0a11b30ccef1bb1678b2a1cb282ce57e",
+                    "size": 32673
                 },
                 {
                     "name": "pi-lsp/v1.3.2/contracts.ts",
