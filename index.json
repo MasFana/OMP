@@ -51,6 +51,194 @@
             "minPocket": "0.14.0"
         },
         {
+            "kind": "theme",
+            "name": "github-classic",
+            "title": "GitHub Classic",
+            "description": "GitHub Classic: GitHub's first themes for VS Code, in GitHub Dark and GitHub Light as a pair. The older greys, the brighter syntax colors, and the green and blue accents of that palette, with GitHub's corners and fonts.",
+            "tags": [
+                "github",
+                "theme",
+                "dark",
+                "light",
+                "classic",
+                "developer",
+                "editor"
+            ],
+            "author": {
+                "name": "MasFana",
+                "github": "MasFana"
+            },
+            "version": "1.0.0",
+            "source": {
+                "repo": "MasFana/pi-github-theme",
+                "commit": "9fa15ff56b13dbca2e913132a61f28dc949dcad0"
+            },
+            "files": [
+                {
+                    "name": "github-classic/theme.json",
+                    "sha256": "2a2686aeb097c818ac63ab1bb71e7b3dfc6b82f68dc50aaaf78a6ac778604518",
+                    "size": 319
+                },
+                {
+                    "name": "github-classic/theme.css",
+                    "sha256": "1bba0748b212eb18e51cdcf93f90c47d6c4b9227014f8236fcb993aa74049344",
+                    "size": 3610
+                },
+                {
+                    "name": "github-classic/colors.toml",
+                    "sha256": "d89bff18f194488da5740aa8526fd4222e02873c72d8dbe26b900490d4be5774",
+                    "size": 502
+                },
+                {
+                    "name": "github-classic/colors-light.toml",
+                    "sha256": "afd67a7c95f32c90977d4b71e718dfba7c6784e93af0e3ae5a3b11dab3df2fa1",
+                    "size": 471
+                }
+            ],
+            "themeApi": 1,
+            "minPocket": "0.14.0"
+        },
+        {
+            "kind": "theme",
+            "name": "github-colorblind",
+            "title": "GitHub Colorblind",
+            "description": "GitHub Colorblind: GitHub's look on the deuteranopia- and protanopia-safe palette, in Dark Colorblind and Light Colorblind as a pair: GitHub's greys and corners, with the syntax and status colors that palette remaps.",
+            "tags": [
+                "github",
+                "theme",
+                "dark",
+                "light",
+                "colorblind",
+                "accessibility",
+                "developer",
+                "editor"
+            ],
+            "author": {
+                "name": "MasFana",
+                "github": "MasFana"
+            },
+            "version": "1.0.0",
+            "source": {
+                "repo": "MasFana/pi-github-theme",
+                "commit": "9fa15ff56b13dbca2e913132a61f28dc949dcad0"
+            },
+            "files": [
+                {
+                    "name": "github-colorblind/theme.json",
+                    "sha256": "5e1c646d7332b1fa50aa7cd5a933a6e81932f5e85c7ce50a05b5cf654af9463d",
+                    "size": 291
+                },
+                {
+                    "name": "github-colorblind/theme.css",
+                    "sha256": "80d14cc47ebf67e0fb6694bad5e4645c3ad8975faa4e7a69ae1f5834ceeb4468",
+                    "size": 3680
+                },
+                {
+                    "name": "github-colorblind/colors.toml",
+                    "sha256": "9327e72b7ab9b8a456c4bd1ccb2a22c842f1e0988b6e491cf2840d5096c41772",
+                    "size": 505
+                },
+                {
+                    "name": "github-colorblind/colors-light.toml",
+                    "sha256": "c36848442ea855b53a13c431e425afdf98b6583edaf0449e864596ef22983ce4",
+                    "size": 474
+                }
+            ],
+            "themeApi": 1,
+            "minPocket": "0.14.0"
+        },
+        {
+            "kind": "theme",
+            "name": "github-dimmed",
+            "title": "GitHub Dark Dimmed",
+            "description": "GitHub Dark Dimmed: GitHub's look on the dimmed palette, without a light half. GitHub's greys, 6px corners, its syntax colors, and its green primary button, with quiet text at 4.5:1 or more on the dimmed ground.",
+            "tags": [
+                "github",
+                "theme",
+                "dark",
+                "dimmed",
+                "developer",
+                "editor"
+            ],
+            "author": {
+                "name": "MasFana",
+                "github": "MasFana"
+            },
+            "version": "1.0.0",
+            "source": {
+                "repo": "MasFana/pi-github-theme",
+                "commit": "9fa15ff56b13dbca2e913132a61f28dc949dcad0"
+            },
+            "files": [
+                {
+                    "name": "github-dimmed/theme.json",
+                    "sha256": "4b19327c3f4a151ae44469ea93a0902aa3eeca161351437df5de35e38bfe1f67",
+                    "size": 309
+                },
+                {
+                    "name": "github-dimmed/theme.css",
+                    "sha256": "7d1d504d657e7542ec121cbc1e1d45acaaec828f6023cecc5b1682a6b4ad1e01",
+                    "size": 2676
+                },
+                {
+                    "name": "github-dimmed/colors.toml",
+                    "sha256": "7bdd26e24fb66bfc5c873f781852b404459b302fdd35f96103a6830638833117",
+                    "size": 506
+                }
+            ],
+            "themeApi": 1,
+            "minPocket": "0.14.0"
+        },
+        {
+            "kind": "theme",
+            "name": "github-high-contrast",
+            "title": "GitHub High Contrast",
+            "description": "GitHub High Contrast: GitHub's look with strong 1px lines and full-contrast quiet text, in Dark High Contrast and Light High Contrast as a pair. GitHub's greys, corners, syntax colors, and green primary button.",
+            "tags": [
+                "github",
+                "theme",
+                "dark",
+                "light",
+                "high-contrast",
+                "accessibility",
+                "developer",
+                "editor"
+            ],
+            "author": {
+                "name": "MasFana",
+                "github": "MasFana"
+            },
+            "version": "1.0.0",
+            "source": {
+                "repo": "MasFana/pi-github-theme",
+                "commit": "9fa15ff56b13dbca2e913132a61f28dc949dcad0"
+            },
+            "files": [
+                {
+                    "name": "github-high-contrast/theme.json",
+                    "sha256": "edcf00bc6f73a15343cd8d43b000c02f6e69c582adc347e1815a4295e381d0fe",
+                    "size": 299
+                },
+                {
+                    "name": "github-high-contrast/theme.css",
+                    "sha256": "6befe98af816062cd6457e0ea4d878647b265748fd3ef381ff2c702ae5e72b8c",
+                    "size": 3656
+                },
+                {
+                    "name": "github-high-contrast/colors.toml",
+                    "sha256": "ebb776a3a518a841905dbae3daa960ca7fa7942a542e39be6584212250d940e4",
+                    "size": 508
+                },
+                {
+                    "name": "github-high-contrast/colors-light.toml",
+                    "sha256": "1ee6513df143b17fb942c3b56f0296d0d104a1051b8785782c411d67227617fd",
+                    "size": 477
+                }
+            ],
+            "themeApi": 1,
+            "minPocket": "0.14.0"
+        },
+        {
             "name": "pi-lsp",
             "title": "Pi Fana Tooling",
             "description": "55-server LSP catalog, verified installer outcomes, automatic AST detection and source-change CodeGraph sync. Owner handoff without extension prompts; native Pocket policies retained.",

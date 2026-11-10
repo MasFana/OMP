@@ -1,0 +1,40 @@
+{
+    "kind": "theme",
+    "name": "github-high-contrast",
+    "title": "GitHub High Contrast",
+    "description": "GitHub High Contrast: GitHub's look with strong 1px lines and full-contrast quiet text, in Dark High Contrast and Light High Contrast as a pair. GitHub's greys, corners, syntax colors, and green primary button.",
+    "tags": ["github", "theme", "dark", "light", "high-contrast", "accessibility", "developer", "editor"],
+    "author": {
+        "name": "MasFana",
+        "github": "MasFana"
+    },
+    "version": "1.0.0",
+    "source": {
+        "repo": "MasFana/pi-github-theme",
+        "commit": "9fa15ff56b13dbca2e913132a61f28dc949dcad0"
+    },
+    "files": [
+        {
+            "name": "github-high-contrast/theme.json",
+            "sha256": "edcf00bc6f73a15343cd8d43b000c02f6e69c582adc347e1815a4295e381d0fe",
+            "size": 299
+        },
+        {
+            "name": "github-high-contrast/theme.css",
+            "sha256": "6befe98af816062cd6457e0ea4d878647b265748fd3ef381ff2c702ae5e72b8c",
+            "size": 3656
+        },
+        {
+            "name": "github-high-contrast/colors.toml",
+            "sha256": "ebb776a3a518a841905dbae3daa960ca7fa7942a542e39be6584212250d940e4",
+            "size": 508
+        },
+        {
+            "name": "github-high-contrast/colors-light.toml",
+            "sha256": "1ee6513df143b17fb942c3b56f0296d0d104a1051b8785782c411d67227617fd",
+            "size": 477
+        }
+    ],
+    "themeApi": 1,
+    "minPocket": "0.14.0"
+}

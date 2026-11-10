@@ -1,0 +1,35 @@
+{
+    "kind": "theme",
+    "name": "github-dimmed",
+    "title": "GitHub Dark Dimmed",
+    "description": "GitHub Dark Dimmed: GitHub's look on the dimmed palette, without a light half. GitHub's greys, 6px corners, its syntax colors, and its green primary button, with quiet text at 4.5:1 or more on the dimmed ground.",
+    "tags": ["github", "theme", "dark", "dimmed", "developer", "editor"],
+    "author": {
+        "name": "MasFana",
+        "github": "MasFana"
+    },
+    "version": "1.0.0",
+    "source": {
+        "repo": "MasFana/pi-github-theme",
+        "commit": "9fa15ff56b13dbca2e913132a61f28dc949dcad0"
+    },
+    "files": [
+        {
+            "name": "github-dimmed/theme.json",
+            "sha256": "4b19327c3f4a151ae44469ea93a0902aa3eeca161351437df5de35e38bfe1f67",
+            "size": 309
+        },
+        {
+            "name": "github-dimmed/theme.css",
+            "sha256": "7d1d504d657e7542ec121cbc1e1d45acaaec828f6023cecc5b1682a6b4ad1e01",
+            "size": 2676
+        },
+        {
+            "name": "github-dimmed/colors.toml",
+            "sha256": "7bdd26e24fb66bfc5c873f781852b404459b302fdd35f96103a6830638833117",
+            "size": 506
+        }
+    ],
+    "themeApi": 1,
+    "minPocket": "0.14.0"
+}

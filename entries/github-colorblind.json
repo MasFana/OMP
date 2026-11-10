@@ -1,0 +1,40 @@
+{
+    "kind": "theme",
+    "name": "github-colorblind",
+    "title": "GitHub Colorblind",
+    "description": "GitHub Colorblind: GitHub's look on the deuteranopia- and protanopia-safe palette, in Dark Colorblind and Light Colorblind as a pair: GitHub's greys and corners, with the syntax and status colors that palette remaps.",
+    "tags": ["github", "theme", "dark", "light", "colorblind", "accessibility", "developer", "editor"],
+    "author": {
+        "name": "MasFana",
+        "github": "MasFana"
+    },
+    "version": "1.0.0",
+    "source": {
+        "repo": "MasFana/pi-github-theme",
+        "commit": "9fa15ff56b13dbca2e913132a61f28dc949dcad0"
+    },
+    "files": [
+        {
+            "name": "github-colorblind/theme.json",
+            "sha256": "5e1c646d7332b1fa50aa7cd5a933a6e81932f5e85c7ce50a05b5cf654af9463d",
+            "size": 291
+        },
+        {
+            "name": "github-colorblind/theme.css",
+            "sha256": "80d14cc47ebf67e0fb6694bad5e4645c3ad8975faa4e7a69ae1f5834ceeb4468",
+            "size": 3680
+        },
+        {
+            "name": "github-colorblind/colors.toml",
+            "sha256": "9327e72b7ab9b8a456c4bd1ccb2a22c842f1e0988b6e491cf2840d5096c41772",
+            "size": 505
+        },
+        {
+            "name": "github-colorblind/colors-light.toml",
+            "sha256": "c36848442ea855b53a13c431e425afdf98b6583edaf0449e864596ef22983ce4",
+            "size": 474
+        }
+    ],
+    "themeApi": 1,
+    "minPocket": "0.14.0"
+}
