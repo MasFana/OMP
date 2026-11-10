@@ -14,12 +14,12 @@
         "name": "MasFana",
         "github": "MasFana"
     },
-    "version": "1.0.1",
+    "version": "1.0.2",
     "pocketApi": 2,
     "minPocket": "0.28.0",
     "source": {
         "repo": "MasFana/pi-session-cleanup",
-        "commit": "63125132291fd97bfaecf599aed2932ced96639f"
+        "commit": "ac62a2e9c6d84e7302d455c3b80073f5eed09ef5"
     },
     "declares": {
         "extensions": [],
@@ -40,13 +40,13 @@
     "files": [
         {
             "name": "pi-session-cleanup.ts",
-            "sha256": "cbc04c62cd88cdffa6ff43f1b9121a5a96731bed4a112b9bcd6ec6cfe7eb78ce",
+            "sha256": "340d43036428efdd522b4030fe39596e99824567126fb69813521390554cd5cf",
             "size": 5702
         },
         {
             "name": "pi-session-cleanup.js",
-            "sha256": "0d8da300eed2a61c7c2ccbb8fad023ef4597dd3e2823e0fd3a7697e4f864183e",
-            "size": 22894
+            "sha256": "15573637c42067fec163025105baf5a6e98853502d998a573da8d5c86d428bab",
+            "size": 25079
         }
     ],
     "revoked": []
