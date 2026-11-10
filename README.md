@@ -15,7 +15,7 @@ As the Pocket owner, open **Menu → Extensions → Discover**, set the index at
 
 | Entry | Purpose | Requirements | Source |
 |---|---|---|---|
-| [`pi-lsp`](entries/pi-lsp.json) | Pi Fana Tooling: LSP/AST/CodeGraph queries, autonomous owner preview/apply and provider management, automatic diagnostics; no plugin confirmation prompts | Pocket ≥0.28.0; extension API 2; optional compatible providers | [MasFana/pi-lsp](https://github.com/MasFana/pi-lsp) |
+| [`pi-lsp`](entries/pi-lsp.json) | Pi Fana Tooling: 55-server LSP catalog, verified installer outcomes, automatic AST detection and CodeGraph source-change sync, autonomous preview/apply; no plugin confirmation prompts | Pocket ≥0.28.0; extension API 2; optional compatible providers | [MasFana/pi-lsp](https://github.com/MasFana/pi-lsp) |
 
 The entry JSON, not this table or its human version label, is authoritative for the pinned commit, files, API requirements, capabilities, and revocations.
 
