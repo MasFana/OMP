@@ -1,0 +1,52 @@
+{
+    "name": "pi-session-cleanup",
+    "title": "Session Cleanup",
+    "description": "Custom Pocket cleanup build required. Owner-only deletion of selected sessions and native subagents; stops owned work, purges storage, preserves shared fork history and project files. No archive fallback.",
+    "tags": [
+        "sessions",
+        "cleanup",
+        "subagents",
+        "administration",
+        "custom-build"
+    ],
+    "author": {
+        "name": "MasFana",
+        "github": "MasFana"
+    },
+    "version": "1.0.0",
+    "pocketApi": 2,
+    "minPocket": "0.28.0",
+    "source": {
+        "repo": "MasFana/pi-session-cleanup",
+        "commit": "f4c96b0742ef1d134948d8b523cda2af9c73bd18"
+    },
+    "declares": {
+        "extensions": [],
+        "tools": [],
+        "readOnlyTools": [],
+        "hooks": [],
+        "sections": [],
+        "commands": [],
+        "wraps": [],
+        "routes": [
+            "GET sessions",
+            "POST preview",
+            "POST delete"
+        ],
+        "client": "owner",
+        "access": "owner"
+    },
+    "files": [
+        {
+            "name": "pi-session-cleanup.ts",
+            "sha256": "891195584c07d63abf72f99dd220cdebc64e64ee01938ae4d55a31eff777143a",
+            "size": 5321
+        },
+        {
+            "name": "pi-session-cleanup.js",
+            "sha256": "ddf2247a19db287888b93b492893b77a94afd19b61a70ae49e7be359dd04619f",
+            "size": 17624
+        }
+    ],
+    "revoked": []
+}

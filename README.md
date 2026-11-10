@@ -16,6 +16,7 @@ As the Pocket owner, open **Menu → Extensions → Discover**, set the index at
 | Entry | Purpose | Requirements | Source |
 |---|---|---|---|
 | [`pi-lsp`](entries/pi-lsp.json) | Pi Fana Tooling: 55-server LSP catalog, verified installer outcomes, automatic AST detection and CodeGraph source-change sync, autonomous preview/apply; no plugin confirmation prompts | Pocket ≥0.28.0; extension API 2; optional compatible providers | [MasFana/pi-lsp](https://github.com/MasFana/pi-lsp) |
+| [`pi-session-cleanup`](entries/pi-session-cleanup.json) | Owner-only real session deletion with recursive native subagent cleanup, scope previews and retry receipts; preserves shared fork history and project files | **Custom [Pocket cleanup build](https://github.com/MasFana/pi-pocket/tree/40050b0cc576678932e6972c676cdc9abe458619) required**, API 2; stock Pocket 0.28.0 has no deletion API | [MasFana/pi-session-cleanup](https://github.com/MasFana/pi-session-cleanup) |
 | [`github`](entries/github.json) | GitHub theme: flat surfaces on 1px lines, 6px corners, Primer's blue accent and green primary button, GitHub's syntax palette and fonts, GitHub Dark Default and GitHub Light Default as a pair; CSS only | Pocket ≥0.14.0; theme API 1 | [MasFana/pi-github-theme](https://github.com/MasFana/pi-github-theme) |
 | [`github-dimmed`](entries/github-dimmed.json) | GitHub Dark Dimmed: the same look on the dimmed palette, no light half | Pocket ≥0.14.0; theme API 1 | [MasFana/pi-github-theme](https://github.com/MasFana/pi-github-theme) |
 | [`github-high-contrast`](entries/github-high-contrast.json) | GitHub High Contrast: strong 1px lines and full-contrast quiet text, dark and light as a pair | Pocket ≥0.14.0; theme API 1 | [MasFana/pi-github-theme](https://github.com/MasFana/pi-github-theme) |
@@ -23,6 +24,8 @@ As the Pocket owner, open **Menu → Extensions → Discover**, set the index at
 | [`github-classic`](entries/github-classic.json) | GitHub Classic: GitHub's first themes for VS Code, dark and light as a pair | Pocket ≥0.14.0; theme API 1 | [MasFana/pi-github-theme](https://github.com/MasFana/pi-github-theme) |
 
 The entry JSON, not this table or its human version label, is authoritative for the pinned commit, files, API requirements, capabilities, and revocations.
+
+`pi-session-cleanup` is a custom-build entry: its `minPocket` records the base version, not stock deletion support. Installing it does not patch Pocket or migrate its runtime. Follow the source's pinned custom-build instructions, stop the old server and back up data before opening the schema-3 build; unsupported actions return 501 without an archive fallback.
 
 ## Repository contract
 
